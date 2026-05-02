@@ -11,13 +11,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<IncidentsDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("IncidentsConnection")));
 var app = builder.Build();
+ 
 
-if (app.Environment.IsDevelopment())
-{
-   
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    
+app.UseSwagger();
+app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

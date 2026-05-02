@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AppTests.Tests
 {
+    [Trait("Category", "Unit")]
     public class SumTests
     {
         [Fact]
