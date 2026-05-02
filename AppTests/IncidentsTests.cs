@@ -10,6 +10,7 @@ using Xunit;
 
 namespace AppTests
 {
+    [Trait("Category", "Unit")]
     public class IncidentsTests
     {
         private IncidentsDbContext GetDbContext()
